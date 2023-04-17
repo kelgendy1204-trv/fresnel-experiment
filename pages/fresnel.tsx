@@ -3,10 +3,11 @@ import { Atomic_Age } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
 import fresnel from "../lib/fresnel";
+import { EnhancedMedia } from "@/lib/media";
 
 const atomic_Age = Atomic_Age({ weight: "400", subsets: ["latin"] });
 
-const { MediaContextProvider, Media } = fresnel;
+const { MediaContextProvider } = fresnel;
 
 export default function Home() {
     return (
@@ -19,15 +20,15 @@ export default function Home() {
             </Head>
             <main className={`${styles.main} ${atomic_Age.className}`}>
                 <MediaContextProvider>
-                    <Media at="sm">
+                    <EnhancedMedia at="sm">
                         Mobile
-                    </Media>
-                    <Media at="md">
+                    </EnhancedMedia>
+                    <EnhancedMedia at="md">
                         Tablet
-                    </Media>
-                    <Media greaterThanOrEqual="lg">
+                    </EnhancedMedia>
+                    <EnhancedMedia at="lg">
                         Desktop
-                    </Media>
+                    </EnhancedMedia>
                 </MediaContextProvider>
             </main>
         </>
