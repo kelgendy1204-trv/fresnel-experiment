@@ -14,16 +14,16 @@ export const EnhancedMedia = ({
     ...rest
 }: PropsWithChildren<MediaProps<"sm" | "md" | "lg" | "xl", never>>) => {
     const { className: passedClassName, style, interaction, ...breakpointProps } = rest;
-    const [isClient, setIsClient] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const type = propKey(breakpointProps)
     const breakpoint = breakpointProps[type]!
     const className = createClassName(type, breakpoint);
 
     useEffect(() => {
-        setIsClient(true);
+        setIsMounted(true);
     }, []);
 
-    if (isClient) {
+    if (isMounted) {
         return <Media {...rest}>{children}</Media>;
     }
 
