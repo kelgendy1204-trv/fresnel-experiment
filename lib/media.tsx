@@ -30,7 +30,7 @@ export const EnhancedMedia = ({
     return (
         <div
             className={cn('fresnel-container', className, passedClassName)}
-            style={style}
+            // style={style}
             suppressHydrationWarning={true}
         >
             {children}
