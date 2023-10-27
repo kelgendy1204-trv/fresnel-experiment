@@ -1,7 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import fresnel from '../lib/fresnel';
-
-const { createMediaStyle } = fresnel;
+import { createMediaStyle } from '../lib/fresnel';
 
 const mediaStyles = createMediaStyle();
 

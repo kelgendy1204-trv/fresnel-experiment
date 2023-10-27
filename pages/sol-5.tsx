@@ -2,13 +2,10 @@ import Head from "next/head";
 import { Atomic_Age } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
-import fresnel from "../lib/trivago-fresnel";
+import { EnhancedMediaContextProvider, Media } from "../lib/trivago-fresnel";
 import { Desktop, Mobile, SomeComponent, Tablet } from "@/components/components";
-import { EnhancedMediaContextProvider } from "@/lib/context";
 
 const atomic_Age = Atomic_Age({ weight: "400", subsets: ["latin"] });
-
-const { Media } = fresnel;
 
 export default function Home() {
     return (
