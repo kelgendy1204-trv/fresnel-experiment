@@ -1,4 +1,4 @@
-import { Desktop, Mobile, Tablet } from "@/components/components";
+import { Desktop, Mobile, SomeComponent, Tablet } from "@/components/components";
 import React, { FC, PropsWithChildren, useEffect, useState } from "react";
 import { useMediaQuery, Context as ResponsiveContext } from "react-responsive";
 import styles from "@/styles/Home.module.css";
@@ -54,9 +54,11 @@ export default function ReactResponsivePage() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={`${styles.main} ${atomic_Age.className}`}>
+                React Responsive
                 <ResponsiveContext.Provider
                     value={hydrated ? undefined : { width: 1600 }}
                 >
+                    <SomeComponent />
                     <ReactResponsive />
                 </ResponsiveContext.Provider>
             </main>

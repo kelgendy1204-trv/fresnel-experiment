@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@artsy/fresnel": "^6.1.0",
+    "@trivago/fresnel": "trivago/fresnel",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",

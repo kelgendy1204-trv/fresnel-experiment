@@ -3,11 +3,12 @@ import { Atomic_Age } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
 import fresnel from "../lib/fresnel";
-import { Desktop, Mobile, Tablet } from "@/components/components";
+import { Desktop, Mobile, SomeComponent, Tablet } from "@/components/components";
+import { EnhancedMediaContextProvider } from "@/lib/context";
 
 const atomic_Age = Atomic_Age({ weight: "400", subsets: ["latin"] });
 
-const { MediaContextProvider, Media } = fresnel;
+const { Media } = fresnel;
 
 export default function Home() {
     return (
@@ -19,7 +20,9 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className={`${styles.main} ${atomic_Age.className}`}>
-                <MediaContextProvider>
+                <EnhancedMediaContextProvider onlyMatch={['lg']}>
+                    Current Frensel
+                    <SomeComponent />
                     <Media at="sm">
                         <Mobile />
                     </Media>
@@ -29,7 +32,7 @@ export default function Home() {
                     <Media at="lg">
                         <Desktop />
                     </Media>
-                </MediaContextProvider>
+                </EnhancedMediaContextProvider>
             </main>
         </>
     );

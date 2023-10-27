@@ -2,8 +2,8 @@ import Head from "next/head";
 import { Atomic_Age } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 
-import fresnel from "../lib/fresnel";
-import { Desktop, Mobile, Tablet } from "@/components/components";
+import fresnel from "../lib/trivago-fresnel";
+import { Desktop, Mobile, SomeComponent, Tablet } from "@/components/components";
 import { EnhancedMediaContextProvider } from "@/lib/context";
 
 const atomic_Age = Atomic_Age({ weight: "400", subsets: ["latin"] });
@@ -21,6 +21,8 @@ export default function Home() {
             </Head>
             <main className={`${styles.main} ${atomic_Age.className}`}>
                 <EnhancedMediaContextProvider onlyMatch={['lg']}>
+                    Trivago Frensel
+                    <SomeComponent />
                     <Media at="sm">
                         <Mobile />
                     </Media>

@@ -187,6 +187,10 @@
   dependencies:
     tslib "^2.4.0"
 
+"@trivago/fresnel@trivago/fresnel":
+  version "6.1.0"
+  resolved "https://codeload.github.com/trivago/fresnel/tar.gz/7b10e0ab288be0500aa359abb34c8b814592eb5b"
+
 "@types/json5@^0.0.29":
   version "0.0.29"
   resolved "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"

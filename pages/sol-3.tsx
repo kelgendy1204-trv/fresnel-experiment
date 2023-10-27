@@ -4,7 +4,7 @@ import styles from "@/styles/Home.module.css";
 
 import fresnel from "../lib/fresnel";
 import { EnhancedMedia } from "@/lib/media";
-import { Desktop, Mobile, Tablet } from "@/components/components";
+import { Desktop, Mobile, SomeComponent, Tablet } from "@/components/components";
 
 const atomic_Age = Atomic_Age({ weight: "400", subsets: ["latin"] });
 
@@ -21,6 +21,8 @@ export default function Home() {
             </Head>
             <main className={`${styles.main} ${atomic_Age.className}`}>
                 <MediaContextProvider>
+                    Media Wrapper
+                    <SomeComponent />
                     <EnhancedMedia at="sm">
                         <Mobile />
                     </EnhancedMedia>

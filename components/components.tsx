@@ -1,6 +1,6 @@
-import { useEffect, memo } from "react";
+import { useEffect } from "react";
 
-export const Desktop = memo(() => {
+export const Desktop = () => {
     useEffect(() => {
         console.log('Desktop rendered!');
     }, []);
@@ -8,9 +8,7 @@ export const Desktop = memo(() => {
     return (
         <>Desktop</>
     );
-});
-
-Desktop.displayName = 'Desktop';
+};
 
 export const Tablet = () => {
     useEffect(() => {
@@ -29,5 +27,15 @@ export const Mobile = () => {
 
     return (
         <>Mobile</>
+    );
+};
+
+export const SomeComponent = () => {
+    useEffect(() => {
+        console.log('SomeComponent rendered!');
+    }, []);
+
+    return (
+        <div>Some Component</div>
     );
 };
