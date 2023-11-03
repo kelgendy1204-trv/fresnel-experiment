@@ -26,7 +26,7 @@ export default function Home() {
                     <Media at="md">
                         <Tablet />
                     </Media>
-                    <Media at="lg">
+                    <Media greaterThanOrEqual="lg">
                         <Desktop />
                     </Media>
                 </EnhancedMediaContextProvider>
