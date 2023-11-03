@@ -10,7 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@artsy/fresnel": "^6.1.0",
+    "@artsy/fresnel": "6.1.0",
+    "@artsy/fresnel-new": "npm:@artsy/fresnel@7.1.3",
     "@trivago/fresnel": "trivago/fresnel",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
